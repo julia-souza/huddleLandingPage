@@ -47,17 +47,26 @@ section {
 .text p{
     margin-bottom: 20px;
 }
-
-p, h1{
+p, h1, h2,h3{
     color: white;
+}
+
+h1{
     font-size: 4rem;
 }
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+
 p{
     font-size: 1.05rem;
     text-align: center;
 }
 
-.btnSolid{
+.btnSolid, .btn{
     display: block;
     border: none;
     text-decoration: none;
@@ -66,9 +75,18 @@ p{
     width: 300px;
     height: min-content;
     padding: 10px;
-    background-color: white;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
+}
+.btnSolid{
+    background-color: white;
+}
+.btn{
+    background-color: none;
+    border: 2px solid hsl(300, 69%, 71%);
+    box-shadow: none;
+    color: white;
+
 }
 
 .social_links{
@@ -85,7 +103,7 @@ p{
     padding: 20px;
 }
 
-.btnSolid:hover{
+.btnSolid:hover, .btn:hover{
     background-color: hsl(300, 69%, 71%);
     color: hsl(257, 37%, 11%);
     transition: 1s;
@@ -94,16 +112,49 @@ p{
 .form_data{
     margin-bottom: 30px;
 }
-.formulario, .whats{
+.formulario, .whats, .projetos{
     margin: auto;
-    width: 60%;
+    width: 70%;
     padding: 30px;
+}
+.projetos{
+    width: 80%;
+}
+.projeto_lay{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px 0 30px;
+}
+.projeto{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.projeto img{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.projetos h1{
+    text-align: center;
 }
 
 .whats{
     background-color: hsla(300, 69%, 71%, 0.534);
     border-radius: 20px;
 }
+
 .formulario input{
     display: block;
     width: 100%;
@@ -138,7 +189,7 @@ p{
 
     .conteudo {
         display: block;
-        height: 100%;
+        height: 80%;
     }
 
     .text{
@@ -157,25 +208,37 @@ p{
         font-size: 15px;
     }
 
-    .btnSolid{
+    .btnSolid, .btn{
         margin: auto;
         width: 200px;
     }
     .social_links{
-        position: relative;
-        left: -150px;
-        bottom: 0px;
+        display: none;
     }
-    .social li{
+
+    /* .social li{
         text-align: center;
         font-size: 1rem;
         margin-top: auto;
-    }
-    .formulario, .whats{
+    } */
+    .formulario, .whats, .projetos, .projeto_lay{
         margin: auto;
         width: 100%;
         padding: 40px;
     }
+    .projeto_lay{
+        display: block;
+    }
+    .projeto{
+        display: block;
+        height: 80%;
+        margin-bottom: 10px;
+    } 
+    .projeto img{
+        width: 100%;
+        height: 100%;
+    }
+
     .formulario label{
         padding: 6px;
         font-size: 1.05rem;
